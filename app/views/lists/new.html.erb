@@ -1,0 +1,15 @@
+<div class="container"></div>
+<h1>new</h1>
+<%= form_tag ("/create") do %>
+<%= label_tag "title"%>
+<%= text_field :lists,:title ,placeholder:"title"%>
+<%= label_tag "content"%>
+<%# <%= text_field :lists,:content %>
+
+<textarea name="content">  </textarea>
+<%= submit_tag "送信"%>
+    <%# <% @list.errors.full_messages.each do |message|%>
+    <%# <%= message %>
+    <%# <% end %>  
+<% end %>
+</div>

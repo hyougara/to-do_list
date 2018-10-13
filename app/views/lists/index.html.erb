@@ -1,0 +1,13 @@
+<div class="container">
+<h1>To-Do List</h1>
+    <% @lists.each do |list|%>
+    <%# リンク %>
+    <%# <span>title:<a href="/lists/<%=list.id%>
+    <%# /edit"><%= list.title %>
+    <%# </a></span> %>
+    <p>title:<%= list.title %></p>
+    <p>content:<%= list.content %></p>
+    <a href="/lists/<%=list.id%>/edit">編集</a>
+    <%= link_to("削除","/lists/#{list.id}/destroy",{method:"post"})%>
+<% end %>
+</div>

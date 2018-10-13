@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ToDoList</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/src/lit.css" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+  <div class="row card">
+        <b class="col">To-Do List</b>
+        <div class="col"><a href="/">home</a></div>
+        <div class="col"><a href="/new">new list</a></div>
+        <div class="col"><a href="/user/index">ユーザー一覧</a></div>
+        <div class="col"><a href="/user/new">新規登録</a></div>
+    </div>
+  </header>
+  <% if flash[:notice] %>
+  <%= flash[:notice]%>
+  <% end %>
+    <%= yield %>
+  <footer>
+  </footer>
+  </body>
+</html>

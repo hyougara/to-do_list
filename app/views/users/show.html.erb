@@ -1,0 +1,5 @@
+<h1>ユーザー詳細</h1>
+<%= @user.name%>
+<%= @user.email%>
+<%= link_to("編集","/users/#{@user.id}/edit") %>
+<%= link_to("ユーザー削除","/users/#{@user.id}/destroy",{method: "post"}) %>

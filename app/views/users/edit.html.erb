@@ -1,0 +1,9 @@
+<h1>ユーザーedit</h1>
+<%= form_tag ("/users/#{@user.id}/update") do %>
+<%= label_tag "Name"%><br>
+<%= text_field :user,:name ,value:@user.name%>
+<br>
+<%= label_tag "E-mail"%><br>
+<%= text_field :user,:email ,value:@user.email%>
+<%= submit_tag "変更する"%>
+ <% end %>

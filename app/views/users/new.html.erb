@@ -1,0 +1,15 @@
+<h1>新規登録</h1>
+<%= form_tag ("/user/create") do %>
+<%= label_tag "Name"%><br>
+<%= text_field :user,:name ,placeholder:"name"%>
+<br>
+<%= label_tag "E-mail"%><br>
+<%= text_field :user,:email ,placeholder:"e-mail"%>
+<%= submit_tag "ユーザー登録"%>
+ <% end %>
+ <%# <p>name</p>
+ <input name="name" placeholder="name">
+ <p>mail addres</p>
+ <input name="email" placeholder="e-mail@example.com">
+ <input type="submit" value="新規登録"> %>
+

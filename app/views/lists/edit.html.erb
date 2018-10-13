@@ -1,0 +1,13 @@
+<h1>edit</h1>
+<%= form_tag ("/lists/#{@list.id}/update") do %>
+<%= label_tag "title"%>
+<%= text_field :lists,:title ,value:@list.title%>
+<%= label_tag "content"%>
+<%# <%= text_field :lists,:content %>
+
+<textarea name="content"><%= @list.content%></textarea>
+<%= submit_tag "変更する"%>
+    <%@list.errors.full_messages.each do |message|%>
+    <%= message %>
+    <% end %>
+<% end %>
